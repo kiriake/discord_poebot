@@ -1,0 +1,7 @@
+setup.py
+discord_poebot/__init__.py
+discord_poebot/discord_poebot.py
+discord_poebot.egg-info/PKG-INFO
+discord_poebot.egg-info/SOURCES.txt
+discord_poebot.egg-info/dependency_links.txt
+discord_poebot.egg-info/top_level.txt
