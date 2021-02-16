@@ -15,7 +15,8 @@ client = discord.Client()
 @client.event
 async def reply(message):
     if message.author == client.user:
-        await message.channel.send('Reforges a rare item with new random modifiers. ')
+        reply = '{message.author.mention} Reforges a rare item with new random modifiers. '
+        await message.channel.send(reply)
 
 @client.event
 async def on_ready():
