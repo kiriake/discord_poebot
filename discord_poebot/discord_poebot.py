@@ -13,6 +13,11 @@ logger.addHandler(handler)
 client = discord.Client()
 
 @client.event
+async def reply(message):
+    if message.author == client.user:
+        await message.channel.send('Reforges a rare item with new random modifiers. ')
+
+@client.event
 async def on_ready():
     logging.info('discord_poebot ready. ')
 
@@ -24,14 +29,11 @@ async def on_message(message):
     if message.author == client.user:
         logging.info(message)
 
+    if client.user in message.mentions:
+        await reply(message)
+
     if message.content == '/ping':
         await message.channel.send('pong. ')
-
-@client.event
-async def reply(message):
-    if message.author == client.user:
-        logging.info(message)
-        await message.channel.send('Reforges a rare item with new random modifiers. ')
 
 try:
     client.run(os.environ['DISCORD_TOKEN'])
