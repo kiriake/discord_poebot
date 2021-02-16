@@ -34,6 +34,6 @@ async def reply(message):
         await message.channel.send('Reforges a rare item with new random modifiers. ')
 
 try:
-    client.run(os.environ(['DISCORD_TOKEN']))
+    client.run(os.environ['DISCORD_TOKEN'])
 except KeyError as err:
     logging.error(err)
