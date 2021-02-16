@@ -18,11 +18,14 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.bot:
+    if message.author.bot:
         return
 
     if message.author == client.user:
         logging.info(message)
+
+    if message in '/ping':
+        await message.channel.send('pong. ')
 
 @client.event
 async def reply(message):
