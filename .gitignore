@@ -1,2 +1,3 @@
 discord_poebot/__pycache__/*
 dist/
+discord_poebot/discord.log

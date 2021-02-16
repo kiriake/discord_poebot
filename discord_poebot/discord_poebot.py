@@ -24,7 +24,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author.bot:
+    if message.author.bot or message.channel.id != 810816487044546591:
         return
 
     if message.author == client.user:
