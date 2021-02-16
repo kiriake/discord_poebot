@@ -24,7 +24,7 @@ async def on_message(message):
     if message.author == client.user:
         logging.info(message)
 
-    if message in '/ping':
+    if message.content == '/ping':
         await message.channel.send('pong. ')
 
 @client.event
