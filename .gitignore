@@ -1,3 +1,4 @@
+discord_poebot.egg_info/*
 discord_poebot/__pycache__/*
 dist/
 discord_poebot/discord.log
